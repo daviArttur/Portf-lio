@@ -1,0 +1,256 @@
+@import './reset.css';
+@import './varsAndMixins.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,900;1,500&family=Roboto+Serif:ital,opsz,wght@1,8..144,500&display=swap');
+//  font-family: 'Lato', sans-serif;
+//  font-family: 'Montserrat', sans-serif;
+//  font-family: 'Roboto Serif', serif;
+
+// pressets
+.technology__containerTechnology, .projects__containerData, .biography__subContainer {
+  background-color: $grey;
+  border-radius: 10px;
+  color: $white;
+}
+
+.subtitle {
+  display: inline-flex;
+  border-bottom: 5px solid $borderSubtitle;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+header {
+
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 6rem;
+  max-width: 78.25rem;
+  min-height: 100vh;
+
+  .header__containerIntroduction {
+
+    h1 {
+      font-size: 96px;
+      font-family: $FPrincipal;
+      font-weight: 800;
+      margin-top: 4rem;
+    }
+
+    h2 {
+      color: $purple;
+      font-family: $FSerif;
+      font-size: 52px;
+      margin-top: 4.375rem;
+    }
+
+    p {
+      color: $spanInHeader;
+      font-family: 'Lato', sans-serif;
+      font-size: 30px;
+      margin-top: 6.25rem;
+    }
+  }
+
+  .header__photoDavi {
+
+    img {
+      max-height: 441.05px;
+      max-width: 370px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+  max-width: 1110px;
+
+  .biography__subContainer {
+    padding: 3rem 2rem;
+    margin-bottom: 7.5rem;
+    
+    p {
+      font-family: $FPrincipal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      padding-bottom: .5rem;
+    }
+
+    strong {
+      color: $purple;
+      font-family: $FSerif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      
+      &::before {
+        content: '#';
+      }
+    }
+  }
+
+  // Tecnology
+
+  .technology__container {
+    
+
+    h3 {
+      display: inline-flex;
+    }
+  } 
+
+  .tecnology__subContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+
+    div {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      height: 13.75rem;
+      justify-content: space-evenly;
+      margin-bottom: 2.5rem;
+      width: 33rem;
+
+
+      p {
+        font-family: $FLato;
+        font-size: 3.5rem;
+        font-weight: 400;
+        width: 50%;
+      }
+    }
+  }
+}
+
+// Projects
+
+.projects__containerData {
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding: 3rem 2rem;
+
+  img {
+    border-radius: 10px;
+  }
+
+  .projects__containerInfo {
+    align-items: left;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0 0 1.2rem 0;
+    max-height: 300px;
+
+    .projects__containerTitle_Gears {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    .projects__projectsIcons {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  section {
+    margin-left: 3rem;
+    width: 100%;
+
+    h4 {
+      font-family: $FPrincipal;
+      font-weight: 400;
+      font-size: 2.65rem;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: url('../assets/icons/Polygon.svg');
+        height: 30px;
+        left: -30px;
+        position: absolute;
+        top: 11px;
+        width: 30px;
+        z-index: 20;
+      }
+    }
+
+    .projects__projectsIcons {
+      position: relative;
+      
+      img {
+        border-radius: 0;
+        margin-left: 1rem;
+        width: 35px;
+      }
+    }
+
+    .projects__ideia {
+      font-family: $FLato;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-left: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        background-image: url('../assets/icons/Lampada.svg');
+        height: 30px;
+        left: -30px;
+        position: absolute;
+        top: -4px;
+        width: 30px;
+        z-index: 20;
+      }
+    }
+
+    .projects__gitLInk {
+      font-family: $FLato;
+      font-size: 1.1rem;
+      font-weight: 300;
+      padding-left: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        background-image: url('../assets/icons/GitHUb.svg');
+        height: 30px;
+        left: -30px;
+        position: absolute;
+        top: -4px;
+        width: 30px;
+        z-index: 20;
+      }
+    }
+  }
+}
+
+.position {
+  position: relative;
+
+  ::after {
+    content: '';
+    background-image: url('../assets/icons/Engrenagem.svg');
+    height: 35px;
+    left: -30px;
+    position: absolute;
+    top: 1px;
+    width: 35px;
+    z-index: 20;
+  } 
+}
+
+
+
+
