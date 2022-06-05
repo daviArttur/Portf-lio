@@ -15,7 +15,7 @@
   margin-bottom: 2rem;
   padding-bottom: 0.25rem;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   .subtitle {
     font-size: 2rem;
   }
@@ -26,7 +26,7 @@ body {
 }
 
 header {
-  display: black;
+  display: flex;
   justify-content: space-between;
   margin: auto;
   margin-top: 6rem;
@@ -49,7 +49,7 @@ header .header__containerIntroduction h1 {
     font-size: 68px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   header .header__containerIntroduction h1 {
     font-size: 48px;
   }
@@ -70,7 +70,7 @@ header .header__containerIntroduction h2 {
     font-size: 34px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   header .header__containerIntroduction h2 {
     font-size: 24px;
   }
@@ -86,7 +86,7 @@ header .header__containerIntroduction p {
     font-size: 26px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   header .header__containerIntroduction p {
     display: none;
   }
@@ -95,9 +95,9 @@ header .header__photoDavi img {
   max-height: 441.05px;
   max-width: 370px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   header .header__photoDavi img {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -105,9 +105,17 @@ main {
   display: flex;
   flex-flow: column wrap;
   margin: auto;
-  max-width: 1110px;
+  max-width: 1100px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 980px) {
+  main .biography__container {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 490px) {
   main .biography__container {
     align-items: center;
     display: flex;
@@ -122,13 +130,12 @@ main .biography__subContainer {
   width: 100%;
   margin: 0;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1100px) {
   main .biography__subContainer {
-    width: 20rem;
     padding: 1rem 1rem;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   main .biography__subContainer {
     margin-bottom: 40px;
     width: 80%;
@@ -170,7 +177,7 @@ main .biography__subContainer strong::before {
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   main .biography__subContainer strong {
     font-size: 12px;
   }
@@ -186,22 +193,26 @@ main .technology__container h3 {
     text-align: center;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   main .technology__container {
+    margin-bottom: 3rem;
     width: 100%;
   }
 }
 main .tecnology__subContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-flow: row wrap;
   justify-content: space-between;
+  place-items: center;
   text-align: center;
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 640px) {
   main .tecnology__subContainer {
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
     justify-content: center;
     text-align: center;
   }
@@ -214,10 +225,16 @@ main .tecnology__subContainer div {
   justify-content: space-evenly;
   margin-bottom: 2.5rem;
   max-width: 33rem;
-  width: 50%;
+  width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  main .tecnology__subContainer div {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 980px) {
   main .tecnology__subContainer div {
+    flex-flow: column nowrap;
     width: 80%;
   }
 }
@@ -226,9 +243,18 @@ main .tecnology__subContainer div {
     font-size: 34px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   main .tecnology__subContainer div {
     flex-flow: column nowrap;
+  }
+}
+main .tecnology__subContainer div img {
+  max-width: 300px;
+}
+@media only screen and (max-width: 980px) {
+  main .tecnology__subContainer div img {
+    max-width: 200px;
+    width: 40%;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -246,7 +272,7 @@ main .tecnology__subContainer div p {
 @media only screen and (max-width: 980px) {
   main .tecnology__subContainer div p {
     width: auto;
-    font-size: 46px;
+    font-size: 42px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -254,13 +280,10 @@ main .tecnology__subContainer div p {
     font-size: 34px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   main .tecnology__subContainer div p {
     font-size: 26px;
   }
-}
-main .tecnology__subContainer div:nth-child(odd) {
-  margin-right: 1rem;
 }
 @media only screen and (max-width: 1100px) {
   main .tecnology__subContainer div:nth-child(odd) {
@@ -271,20 +294,15 @@ main .tecnology__subContainer div:nth-child(odd) {
 .projects__container {
   margin-bottom: 7.5rem;
 }
-@media only screen and (max-width: 1100px) {
-  .projects__container {
-    display: none;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .projects__container {
-    display: none;
-  }
-}
 @media only screen and (max-width: 980px) {
   .projects__container {
     text-align: center;
     padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__container {
+    width: 100%;
   }
 }
 
@@ -293,16 +311,71 @@ main .tecnology__subContainer div:nth-child(odd) {
   margin-bottom: 2.5rem;
   padding: 3rem 2rem;
 }
+@media only screen and (max-width: 980px) {
+  .projects__containerData {
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .projects__containerData {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData {
+    padding: 1rem 1rem;
+    flex-flow: column nowrap;
+    margin: 0 auto 2.5rem auto;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .projects__containerData div {
+    width: 100%;
+  }
+}
+.projects__containerData div .projects__photoProject {
+  margin: auto;
+  min-width: 100px;
+}
+@media only screen and (max-width: 640px) {
+  .projects__containerData div .projects__photoProject {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData div .projects__photoProject {
+    width: 100%;
+  }
+}
 .projects__containerData img {
-  border-radius: 10px;
+  border-radius: 13px;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData img {
+    width: 100%;
+  }
 }
 .projects__containerData .projects__containerInfo {
   align-items: left;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  padding: 0 0 1.2rem 0;
+  padding-bottom: 1.2rem;
   max-height: 300px;
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 640px) {
+  .projects__containerData .projects__containerInfo {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData .projects__containerInfo {
+    gap: 30px;
+    margin-left: 2rem;
+    padding-bottom: 0.6rem;
+  }
 }
 .projects__containerData .projects__containerInfo .projects__containerTitle_Gears {
   align-items: center;
@@ -310,19 +383,38 @@ main .tecnology__subContainer div:nth-child(odd) {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 640px) {
   .projects__containerData .projects__containerInfo .projects__containerTitle_Gears {
     align-items: flex-start;
     flex-flow: column nowrap;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears {
+    padding-top: 5px;
+  }
+}
+.projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+  white-space: nowrap;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+    font-size: 2rem;
   }
 }
 .projects__containerData .projects__containerInfo .projects__projectsIcons {
   display: flex;
   align-items: center;
 }
-.projects__containerData section {
-  margin-left: 3rem;
-  width: 100%;
+@media only screen and (max-width: 980px) {
+  .projects__containerData .projects__containerInfo .projects__projectsIcons {
+    display: none;
+  }
 }
 .projects__containerData section h4 {
   font-family: "Montserrat", sans-serif;
@@ -330,11 +422,6 @@ main .tecnology__subContainer div:nth-child(odd) {
   font-size: 2.65rem;
   padding-left: 1rem;
   position: relative;
-}
-@media only screen and (max-width: 980px) {
-  .projects__containerData section h4 {
-    padding-bottom: 1.2rem;
-  }
 }
 .projects__containerData section h4::before {
   content: "";
@@ -346,8 +433,23 @@ main .tecnology__subContainer div:nth-child(odd) {
   width: 30px;
   z-index: 20;
 }
-.projects__containerData section .projects__projectsIcons {
-  position: relative;
+@media only screen and (max-width: 490px) {
+  .projects__containerData section h4::before {
+    top: 5px;
+  }
+}
+.projects__containerData section .projects__projectsIconsMedia {
+  display: none;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData section .projects__projectsIconsMedia {
+    display: flex;
+  }
+  .projects__containerData section .projects__projectsIconsMedia img {
+    border-radius: 0;
+    margin-left: 1rem;
+    width: 35px;
+  }
 }
 .projects__containerData section .projects__projectsIcons img {
   border-radius: 0;
@@ -360,6 +462,17 @@ main .tecnology__subContainer div:nth-child(odd) {
   font-weight: 500;
   padding-left: 1rem;
   position: relative;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData section .projects__ideia {
+    font-size: 1.1rem;
+    text-align: start;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData section .projects__ideia {
+    word-break: keep-all;
+  }
 }
 .projects__containerData section .projects__ideia::after {
   content: "";
@@ -387,6 +500,11 @@ main .tecnology__subContainer div:nth-child(odd) {
   top: -4px;
   width: 30px;
   z-index: 20;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData section .projects__gitLInk {
+    text-align: start;
+  }
 }
 
 .position {

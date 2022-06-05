@@ -34,7 +34,7 @@ body {
 
 header {
 
-  display: black;
+  display: flex;
   justify-content: space-between;
   margin: auto;
   margin-top: 6rem;
@@ -104,7 +104,7 @@ header {
       max-width: 370px;
 
       @include media(mobile) {
-        width: 80%;
+        width: 90%;
       }
     }
   }
@@ -114,9 +114,16 @@ main {
   display: flex;
   flex-flow: column wrap;
   margin: auto;
-  max-width: 1110px;
+  max-width: 1100px;
 
   .biography__container {
+
+    @include media(tablet) {
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
     
     @include media(mobile) {
       align-items: center;
@@ -133,8 +140,7 @@ main {
     width: 100%;
     margin: 0;
 
-    @include media(tablet) {
-      width: 20rem;
+    @include media(xlarge) {
       padding: 1rem 1rem;
     }
 
@@ -195,20 +201,24 @@ main {
     }
 
     @include media(mobile) {
+      margin-bottom: 3rem;
       width: 100%;
     }
   }
 
   .tecnology__subContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-flow: row wrap;
     justify-content: space-between;
+    place-items: center;
     text-align: center;
 
-    @include media(xlarge) {
+    @include media(average) {
       align-items: center;
       display: flex;
       flex-flow: column nowrap;
+      gap: 1rem;
       justify-content: center;
       text-align: center;
     }
@@ -221,9 +231,14 @@ main {
       justify-content: space-evenly;
       margin-bottom: 2.5rem;
       max-width: 33rem;
-      width: 50%;
+      width: 100%;
+    
+      @include media(xlarge) {
+        width: 90%;
+      }
 
       @include media(tablet) {
+        flex-flow: column nowrap;
         width: 80%;
       }
 
@@ -236,6 +251,12 @@ main {
       }
 
       img {
+        max-width: 300px;
+
+        @include media(tablet) {
+          max-width: 200px;
+          width: 40%;
+        }
         @include media(average) {
           padding-bottom: .5rem;
           width: 120px;
@@ -250,7 +271,7 @@ main {
 
         @include media(tablet) {
           width: auto;
-          font-size: 46px;
+          font-size: 42px;
         }
   
         @include media(average) {
@@ -260,10 +281,6 @@ main {
         @include media(mobile) {
           font-size: 26px;
         }
-      }
-
-      &:nth-child(odd) {
-        margin-right: 1rem;
       }
 
       @include media(xlarge) {
@@ -279,18 +296,16 @@ main {
 
 .projects__container {
 
-  @include media(xlarge) {
-    display: none;
-  }
-
-  @include media(mobile) {
-    display: none;
-  }
+ 
   margin-bottom: 7.5rem;
 
   @include media(tablet) {
     text-align: center;
     padding: 0 1rem;
+  }
+
+  @include media(mobile) {
+    width: 100%;
   }
 }
 
@@ -299,8 +314,47 @@ main {
   margin-bottom: 2.5rem;
   padding: 3rem 2rem;
 
+  @include media(tablet) {
+    padding: 1rem 1rem;
+  }
+
+  @include media(average) {
+    flex-wrap: wrap;
+  }
+
+  @include media(mobile) {
+    padding: 1rem 1rem;
+    flex-flow: column nowrap;
+    margin: 0 auto 2.5rem auto;
+    width: 90%;
+  }
+
+  div {
+    @include media(average) {
+      width: 100%;
+    }
+
+    .projects__photoProject {
+      margin: auto;
+      min-width: 100px;
+  
+      @include media(average) {
+        width: 90%;
+      }
+
+      @include media(mobile) {
+        width: 100%;
+      }
+    }
+  }
+  
+
   img {
-    border-radius: 10px;
+    border-radius: 13px;
+
+    @include media(tablet) {
+      width: 100%;
+    }
   }
 
   .projects__containerInfo {
@@ -308,8 +362,19 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    padding: 0 0 1.2rem 0;
+    padding-bottom: 1.2rem;
     max-height: 300px;
+    margin-left: 3rem;
+
+    @include media(average) {
+      gap: 30px;
+    }
+
+    @include media(mobile) {
+      gap: 30px;
+      margin-left: 2rem;
+      padding-bottom: .6rem;
+    }
 
     .projects__containerTitle_Gears {
       align-items: center;
@@ -317,22 +382,38 @@ main {
       flex-flow: row nowrap;
       justify-content: space-between;
 
-      @include media(tablet) {
+      @include media(average) {
         align-items: flex-start;
         flex-flow: column nowrap;
+      }
+
+      @include media(mobile) {
+        padding-top: 5px;
+      }
+
+      h4 {
+        white-space: nowrap;
+        @include media(tablet) {
+          font-size: 2.4rem;
+        }
+        
+        @include media(mobile) {
+          font-size: 2rem;
+        }
       }
     }
 
     .projects__projectsIcons {
       display: flex;
       align-items: center;
+
+      @include media(tablet) {
+        display: none;
+      }
     }
   }
 
   section {
-    margin-left: 3rem;
-    width: 100%;
-
     h4 {
       font-family: $FPrincipal;
       font-weight: 400;
@@ -340,9 +421,6 @@ main {
       padding-left: 1rem;
       position: relative;
 
-      @include media(tablet) {
-        padding-bottom: 1.2rem;
-      }
 
       &::before {
         content: '';
@@ -353,12 +431,28 @@ main {
         top: 11px;
         width: 30px;
         z-index: 20;
+
+        @include media(mobile) {
+          top: 5px;
+        }
+      }
+    }
+
+    .projects__projectsIconsMedia {
+      display: none;
+
+      @include media(tablet) {
+        display: flex;
+
+        img {
+          border-radius: 0;
+          margin-left: 1rem;
+          width: 35px;
+        }
       }
     }
 
     .projects__projectsIcons {
-      position: relative;
-      
       img {
         border-radius: 0;
         margin-left: 1rem;
@@ -372,6 +466,15 @@ main {
       font-weight: 500;
       padding-left: 1rem;
       position: relative;
+
+      @include media(tablet) {
+        font-size: 1.1rem;
+        text-align: start;
+      }
+
+      @include media(mobile) {
+        word-break: keep-all;
+      }
 
       &::after {
         content: '';
@@ -402,6 +505,10 @@ main {
         width: 30px;
         z-index: 20;
       }
+
+      @include media(tablet) {
+        text-align: start;
+      }
     }
   }
 }
@@ -419,6 +526,8 @@ main {
     width: 35px;
     z-index: 20;
   } 
+
+  
 }
 
 footer {
@@ -427,7 +536,3 @@ footer {
   height: 12rem;
   width: 100%;
 }
-
-
-
-
