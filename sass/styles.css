@@ -15,6 +15,11 @@
   margin-bottom: 2rem;
   padding-bottom: 0.25rem;
 }
+@media only screen and (max-width: 480px) {
+  .subtitle {
+    font-size: 2rem;
+  }
+}
 
 body {
   background: #0C0E12;
@@ -34,11 +39,41 @@ header .header__containerIntroduction h1 {
   font-weight: 800;
   margin-top: 4rem;
 }
+@media only screen and (max-width: 980px) {
+  header .header__containerIntroduction h1 {
+    font-size: 84px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  header .header__containerIntroduction h1 {
+    font-size: 68px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header .header__containerIntroduction h1 {
+    font-size: 48px;
+  }
+}
 header .header__containerIntroduction h2 {
   color: #9611FF;
   font-family: "Roboto Serif", serif;
   font-size: 52px;
   margin-top: 4.375rem;
+}
+@media only screen and (max-width: 980px) {
+  header .header__containerIntroduction h2 {
+    font-size: 46px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  header .header__containerIntroduction h2 {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header .header__containerIntroduction h2 {
+    font-size: 24px;
+  }
 }
 header .header__containerIntroduction p {
   color: #F4F4F5;
@@ -46,9 +81,24 @@ header .header__containerIntroduction p {
   font-size: 30px;
   margin-top: 6.25rem;
 }
+@media only screen and (max-width: 980px) {
+  header .header__containerIntroduction p {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header .header__containerIntroduction p {
+    display: none;
+  }
+}
 header .header__photoDavi img {
   max-height: 441.05px;
   max-width: 370px;
+}
+@media only screen and (max-width: 480px) {
+  header .header__photoDavi img {
+    width: 80%;
+  }
 }
 
 main {
@@ -57,15 +107,49 @@ main {
   margin: auto;
   max-width: 1110px;
 }
+@media only screen and (max-width: 480px) {
+  main .biography__container {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
 main .biography__subContainer {
   padding: 3rem 2rem;
   margin-bottom: 7.5rem;
+  width: 100%;
+  margin: 0;
+}
+@media only screen and (max-width: 980px) {
+  main .biography__subContainer {
+    width: 20rem;
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main .biography__subContainer {
+    margin-bottom: 40px;
+    width: 80%;
+  }
 }
 main .biography__subContainer p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 980px) {
+  main .biography__subContainer p {
+    word-break: keep-all;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  main .biography__subContainer p {
+    font-size: 1rem;
+  }
 }
 main .biography__subContainer strong {
   color: #9611FF;
@@ -76,18 +160,51 @@ main .biography__subContainer strong {
 main .biography__subContainer strong::before {
   content: "#";
 }
+@media only screen and (max-width: 980px) {
+  main .biography__subContainer strong {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  main .biography__subContainer strong {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main .biography__subContainer strong {
+    font-size: 12px;
+  }
+}
 main .technology__container {
   margin-bottom: 7.5rem;
 }
 main .technology__container h3 {
   display: inline-flex;
 }
+@media only screen and (max-width: 1100px) {
+  main .technology__container {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main .technology__container {
+    width: 100%;
+  }
+}
 main .tecnology__subContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   text-align: center;
-  width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  main .tecnology__subContainer {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+  }
 }
 main .tecnology__subContainer div {
   align-items: center;
@@ -96,7 +213,29 @@ main .tecnology__subContainer div {
   height: 13.75rem;
   justify-content: space-evenly;
   margin-bottom: 2.5rem;
-  width: 33rem;
+  max-width: 33rem;
+  width: 50%;
+}
+@media only screen and (max-width: 980px) {
+  main .tecnology__subContainer div {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  main .tecnology__subContainer div {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main .tecnology__subContainer div {
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (max-width: 640px) {
+  main .tecnology__subContainer div img {
+    padding-bottom: 0.5rem;
+    width: 120px;
+  }
 }
 main .tecnology__subContainer div p {
   font-family: "Lato", sans-serif;
@@ -104,9 +243,49 @@ main .tecnology__subContainer div p {
   font-weight: 400;
   width: 50%;
 }
+@media only screen and (max-width: 980px) {
+  main .tecnology__subContainer div p {
+    width: auto;
+    font-size: 46px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  main .tecnology__subContainer div p {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main .tecnology__subContainer div p {
+    font-size: 26px;
+  }
+}
+main .tecnology__subContainer div:nth-child(odd) {
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 1100px) {
+  main .tecnology__subContainer div:nth-child(odd) {
+    margin-right: 0;
+  }
+}
 
 .projects__container {
   margin-bottom: 7.5rem;
+}
+@media only screen and (max-width: 1100px) {
+  .projects__container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .projects__container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .projects__container {
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
 
 .projects__containerData {
@@ -131,6 +310,12 @@ main .tecnology__subContainer div p {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
+@media only screen and (max-width: 980px) {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+  }
+}
 .projects__containerData .projects__containerInfo .projects__projectsIcons {
   display: flex;
   align-items: center;
@@ -145,6 +330,11 @@ main .tecnology__subContainer div p {
   font-size: 2.65rem;
   padding-left: 1rem;
   position: relative;
+}
+@media only screen and (max-width: 980px) {
+  .projects__containerData section h4 {
+    padding-bottom: 1.2rem;
+  }
 }
 .projects__containerData section h4::before {
   content: "";
@@ -214,6 +404,7 @@ main .tecnology__subContainer div p {
 }
 
 footer {
+  display: none;
   background-color: #27272A;
   height: 12rem;
   width: 100%;

@@ -16,3 +16,29 @@ $FPrincipal: 'Montserrat', sans-serif;
 $FSerif: 'Roboto Serif', serif;
 $FLato: 'Lato', sans-serif;
 
+// mixin
+
+@mixin media($width) {
+
+  @if $width == xlarge {
+    @media only screen and (max-width: 1100px) {
+      @content;
+    }
+  }
+
+  @if $width == tablet {
+    @media only screen and (max-width: 980px) {
+      @content;
+    }
+  }
+  @if $width == average {
+    @media only screen and (max-width: 640px) {
+      @content;
+    }
+  }
+  @if $width == mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}

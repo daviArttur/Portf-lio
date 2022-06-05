@@ -21,6 +21,10 @@
   font-size: 3.5rem;
   margin-bottom: 2rem;
   padding-bottom: 0.25rem;
+
+  @include media(mobile) {
+    font-size: 2rem;
+  }
 }
 
 body {
@@ -44,6 +48,18 @@ header {
       font-family: $FPrincipal;
       font-weight: 800;
       margin-top: 4rem;
+
+      @include media(tablet) {
+        font-size: 84px;
+      }
+
+      @include media(average) {
+        font-size: 68px;
+      }
+
+      @include media(mobile) {
+        font-size: 48px;
+      }
     }
 
     h2 {
@@ -51,6 +67,18 @@ header {
       font-family: $FSerif;
       font-size: 52px;
       margin-top: 4.375rem;
+
+      @include media(tablet) {
+        font-size: 46px;
+      }
+
+      @include media(average) {
+        font-size: 34px;
+      }
+
+      @include media(mobile) {
+        font-size: 24px;
+      }
     }
 
     p {
@@ -58,6 +86,14 @@ header {
       font-family: 'Lato', sans-serif;
       font-size: 30px;
       margin-top: 6.25rem;
+
+      @include media(tablet) {
+        font-size: 26px;
+      }
+
+      @include media(mobile) {
+        display: none;
+      }
     }
   }
 
@@ -66,6 +102,10 @@ header {
     img {
       max-height: 441.05px;
       max-width: 370px;
+
+      @include media(mobile) {
+        width: 80%;
+      }
     }
   }
 }
@@ -76,15 +116,47 @@ main {
   margin: auto;
   max-width: 1110px;
 
+  .biography__container {
+    
+    @include media(mobile) {
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
   .biography__subContainer {
     padding: 3rem 2rem;
     margin-bottom: 7.5rem;
-    
+    width: 100%;
+    margin: 0;
+
+    @include media(tablet) {
+      width: 20rem;
+      padding: 1rem 1rem;
+    }
+
+    @include media(mobile) {
+      margin-bottom: 40px;
+      width: 80%;
+    }
+
     p {
       font-family: $FPrincipal;
       font-weight: 500;
       font-size: 1.5rem;
       padding-bottom: .5rem;
+
+      @include media(tablet) {
+        word-break: keep-all;
+        font-size: 1.3rem;
+      }
+
+      @include media(average) {
+        font-size: 1rem;
+      }
     }
 
     strong {
@@ -95,6 +167,16 @@ main {
       
       &::before {
         content: '#';
+      }
+
+      @include media(tablet) {
+        font-size: 1.3rem;
+      }
+      @include media(average) {
+        font-size: 1rem;
+      }
+      @include media (mobile) {
+        font-size: 12px;
       }
     }
   }
@@ -107,15 +189,30 @@ main {
     h3 {
       display: inline-flex;
     }
-  } 
+
+    @include media(xlarge) {
+      text-align: center;
+    }
+
+    @include media(mobile) {
+      width: 100%;
+    }
+  }
 
   .tecnology__subContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     text-align: center;
-    width: 100%;
 
+    @include media(xlarge) {
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-align: center;
+    }
+    
     div {
       align-items: center;
       display: flex;
@@ -123,14 +220,56 @@ main {
       height: 13.75rem;
       justify-content: space-evenly;
       margin-bottom: 2.5rem;
-      width: 33rem;
+      max-width: 33rem;
+      width: 50%;
 
+      @include media(tablet) {
+        width: 80%;
+      }
+
+      @include media(average) {
+        font-size: 34px;
+      }
+
+      @include media(mobile) {
+        flex-flow: column nowrap;
+      }
+
+      img {
+        @include media(average) {
+          padding-bottom: .5rem;
+          width: 120px;
+        }
+      }
 
       p {
         font-family: $FLato;
         font-size: 3.5rem;
         font-weight: 400;
         width: 50%;
+
+        @include media(tablet) {
+          width: auto;
+          font-size: 46px;
+        }
+  
+        @include media(average) {
+          font-size: 34px;
+        }
+  
+        @include media(mobile) {
+          font-size: 26px;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 1rem;
+      }
+
+      @include media(xlarge) {
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -139,7 +278,20 @@ main {
 // Projects
 
 .projects__container {
+
+  @include media(xlarge) {
+    display: none;
+  }
+
+  @include media(mobile) {
+    display: none;
+  }
   margin-bottom: 7.5rem;
+
+  @include media(tablet) {
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
 
 .projects__containerData {
@@ -164,6 +316,11 @@ main {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
+
+      @include media(tablet) {
+        align-items: flex-start;
+        flex-flow: column nowrap;
+      }
     }
 
     .projects__projectsIcons {
@@ -182,6 +339,10 @@ main {
       font-size: 2.65rem;
       padding-left: 1rem;
       position: relative;
+
+      @include media(tablet) {
+        padding-bottom: 1.2rem;
+      }
 
       &::before {
         content: '';
@@ -261,6 +422,7 @@ main {
 }
 
 footer {
+  display: none;
   background-color: $grey;
   height: 12rem;
   width: 100%;
