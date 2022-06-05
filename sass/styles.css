@@ -6,21 +6,6 @@
   color: #fff;
 }
 
-.ativo {
-  animation-name: animaLeft;
-  animation-duration: 1s;
-}
-
-@keyframes animaLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .subtitle {
   display: inline-flex;
   border-bottom: 5px solid #A1A1AA;
@@ -68,9 +53,15 @@ header {
     padding-bottom: 5rem;
   }
 }
+@media only screen and (max-width: 980px) {
+  header .header__containerIntroduction {
+    margin-bottom: 7.5rem;
+  }
+}
 @media only screen and (max-width: 490px) {
-  header {
-    margin-top: 100vh;
+  header .header__containerIntroduction {
+    margin: auto;
+    width: 80%;
   }
 }
 header .header__containerIntroduction h1 {
@@ -135,7 +126,7 @@ header .header__photoDavi img {
   max-height: 441.05px;
   max-width: 370px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 980px) {
   header .header__photoDavi img {
     display: none;
   }
@@ -154,6 +145,9 @@ main {
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
+    margin: auto;
+    margin-bottom: 7.5rem;
+    max-width: 80%;
   }
 }
 @media only screen and (max-width: 490px) {
@@ -557,10 +551,43 @@ main .tecnology__subContainer div p {
 }
 
 footer {
-  display: none;
+  display: flex;
+  align-items: flex-start;
   background-color: #27272A;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
   height: 12rem;
   width: 100%;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+}
+footer div a {
+  padding-left: 0.5rem;
+}
+
+.js-scroll {
+  opacity: 0;
+}
+
+.ativo {
+  opacity: 1;
+  animation-name: animaLeft;
+  animation-duration: 1s;
+}
+
+@keyframes animaLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

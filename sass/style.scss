@@ -13,23 +13,6 @@
   color: $white;
 }
 
-.ativo {
-  animation-name: animaLeft;
-  animation-duration: 1s;
-}
-
-@keyframes animaLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .subtitle {
   display: inline-flex;
   border-bottom: 5px solid $borderSubtitle;
@@ -76,11 +59,16 @@ header {
     padding-bottom: 5rem  ;
   }
 
-  @include media(mobile) {
-    margin-top: 100vh;
-  }
-
   .header__containerIntroduction {
+
+    @include media(tablet) {
+      margin-bottom: 7.5rem;
+    }
+
+    @include media(mobile) {
+      margin: auto;
+      width: 80%;
+    }
 
     h1 {
       font-size: 96px;
@@ -142,7 +130,7 @@ header {
       max-height: 441.05px;
       max-width: 370px;
 
-      @include media(average) {
+      @include media(tablet) {
         display: none;
       }
     }
@@ -163,6 +151,9 @@ main {
       align-items: center;
       flex-flow: column nowrap;
       justify-content: center;
+      margin: auto;
+      margin-bottom: 7.5rem;
+      max-width: 80%;
     }
     
     @include media(mobile) {
@@ -572,8 +563,44 @@ main {
 }
 
 footer {
-  display: none;
+  display: flex;
+  align-items: flex-start;
   background-color: $grey;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
   height: 12rem;
   width: 100%;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+
+    a {
+      padding-left: .5rem;
+    }
+  }
+}
+
+.js-scroll {
+  opacity: 0;
+}
+
+.ativo {
+  opacity: 1;
+  animation-name: animaLeft;
+  animation-duration: 1s;
+}
+
+@keyframes animaLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

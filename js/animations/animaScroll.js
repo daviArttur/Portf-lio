@@ -3,10 +3,13 @@ const animaScroll = () => {
   function select() {
 
     const section = document.querySelectorAll('.js-scroll')
-    const hightDocument = document.body.clientHeight * 0.2;
-   
+       
     section.forEach((element) => {
       const hightElement = element.getBoundingClientRect().top
+      const hightDocument = window.innerHeight * 0.9
+      const height = (hightDocument - hightElement)
+       console.log(height)
+      console.log(hightDocument)
       if (hightElement < hightDocument) {
         element.classList.add('ativo')
       } else if (element.classList.contains('ativo')){
@@ -15,6 +18,7 @@ const animaScroll = () => {
     })
   }
   select()
+  window.addEventListener('touch', select)
   window.addEventListener('scroll', select)
 }
 
