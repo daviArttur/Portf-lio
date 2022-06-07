@@ -55,22 +55,18 @@ header {
   margin-top: 6rem;
   max-width: 78.25rem;
 
-  
-
-  @include media(tablet) {
-    padding-left: 1rem;
-  }
-
-
   @include media(average) {
     padding-bottom: 5rem  ;
   }
 
   .header__containerIntroduction {
-    
-    margin-bottom: 5.5rem;
 
-    @include media(mobile) { 
+    @include media(tablet) {
+      margin-bottom: 7.5rem;
+    }
+
+    @include media(mobile) {
+      margin: auto;
       width: 80%;
     }
 
@@ -150,15 +146,13 @@ main {
 
   .biography__container {
 
-    margin-bottom: 5.5rem;
-
     @include media(tablet) {
       display: flex;
       align-items: center;
       flex-flow: column nowrap;
       justify-content: center;
-      margin: 0 auto 5.5rem auto;
-      
+      margin: auto;
+      margin-bottom: 7.5rem;
       max-width: 80%;
     }
     
@@ -174,12 +168,17 @@ main {
   .biography__subContainer {
     box-shadow: inset 0 0 20px #0e0e0f;
     padding: 3rem 2rem;
-    margin-bottom: 5.5rem;
+    margin-bottom: 7.5rem;
     width: 100%;
     margin: 0;
 
     @include media(xlarge) {
       padding: 1rem 1rem;
+    }
+
+    @include media(mobile) {
+      margin-bottom: 40px;
+      width: 80%;
     }
 
     p {
@@ -216,13 +215,13 @@ main {
   // Tecnology
 
   .technology__container {
-    margin-bottom: 3rem;
+    margin-bottom: 7.5rem;
 
     h3 {
       display: inline-flex;
     }
 
-    @include media(tablet) {
+    @include media(xlarge) {
       text-align: center;
     }
 
@@ -234,26 +233,19 @@ main {
 
   .tecnology__subContainer {
     display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr 1fr;
     flex-flow: row wrap;
-    place-items: left;
+    justify-content: space-between;
+    place-items: center;
     text-align: center;
-
-    @include media(xlarge) {
-      place-items: center;
-    }
 
     @include media(average) {
       align-items: center;
       display: flex;
       flex-flow: column nowrap;
+      gap: 1rem;
       justify-content: center;
       text-align: center;
-    }
-
-    @include media(mobile) {
-      gap: 0;
     }
     
     div {
@@ -267,18 +259,14 @@ main {
       max-width: 33rem;
       width: 100%;
 
-      &:nth-child(2n) {
-       // margin-left: 1rem;
+
+      @include media(xlarge) {
+        width: 90%;
       }
 
-    
       @include media(tablet) {
         flex-flow: column nowrap;
-        width: 90%;
-      }
-
-      @include media(average) {
-        width: 90%;
+        width: 80%;
       }
 
       @include media(average) {
@@ -286,7 +274,6 @@ main {
       }
 
       @include media(mobile) {
-        width: 80%;
         flex-flow: column nowrap;
       }
 
@@ -340,7 +327,7 @@ main {
 .projects__container {
 
  
-  margin-bottom: 3rem;
+  margin-bottom: 7.5rem;
 
   @include media(tablet) {
     text-align: center;

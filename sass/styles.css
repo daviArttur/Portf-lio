@@ -48,21 +48,19 @@ header {
   margin-top: 6rem;
   max-width: 78.25rem;
 }
-@media only screen and (max-width: 980px) {
-  header {
-    padding-left: 1rem;
-  }
-}
 @media only screen and (max-width: 640px) {
   header {
     padding-bottom: 5rem;
   }
 }
-header .header__containerIntroduction {
-  margin-bottom: 5.5rem;
+@media only screen and (max-width: 980px) {
+  header .header__containerIntroduction {
+    margin-bottom: 7.5rem;
+  }
 }
 @media only screen and (max-width: 490px) {
   header .header__containerIntroduction {
+    margin: auto;
     width: 80%;
   }
 }
@@ -141,16 +139,14 @@ main {
   margin: auto;
   max-width: 1100px;
 }
-main .biography__container {
-  margin-bottom: 5.5rem;
-}
 @media only screen and (max-width: 980px) {
   main .biography__container {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
-    margin: 0 auto 5.5rem auto;
+    margin: auto;
+    margin-bottom: 7.5rem;
     max-width: 80%;
   }
 }
@@ -166,13 +162,19 @@ main .biography__container {
 main .biography__subContainer {
   box-shadow: inset 0 0 20px #0e0e0f;
   padding: 3rem 2rem;
-  margin-bottom: 5.5rem;
+  margin-bottom: 7.5rem;
   width: 100%;
   margin: 0;
 }
 @media only screen and (max-width: 1100px) {
   main .biography__subContainer {
     padding: 1rem 1rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  main .biography__subContainer {
+    margin-bottom: 40px;
+    width: 80%;
   }
 }
 main .biography__subContainer p {
@@ -207,12 +209,12 @@ main .biography__subContainer strong::before {
   }
 }
 main .technology__container {
-  margin-bottom: 3rem;
+  margin-bottom: 7.5rem;
 }
 main .technology__container h3 {
   display: inline-flex;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1100px) {
   main .technology__container {
     text-align: center;
   }
@@ -225,29 +227,20 @@ main .technology__container h3 {
 }
 main .tecnology__subContainer {
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr 1fr;
   flex-flow: row wrap;
-  place-items: left;
+  justify-content: space-between;
+  place-items: center;
   text-align: center;
-}
-@media only screen and (max-width: 1100px) {
-  main .tecnology__subContainer {
-    place-items: center;
-  }
 }
 @media only screen and (max-width: 640px) {
   main .tecnology__subContainer {
     align-items: center;
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
     justify-content: center;
     text-align: center;
-  }
-}
-@media only screen and (max-width: 490px) {
-  main .tecnology__subContainer {
-    gap: 0;
   }
 }
 main .tecnology__subContainer div {
@@ -261,15 +254,15 @@ main .tecnology__subContainer div {
   max-width: 33rem;
   width: 100%;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1100px) {
   main .tecnology__subContainer div {
-    flex-flow: column nowrap;
     width: 90%;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 980px) {
   main .tecnology__subContainer div {
-    width: 90%;
+    flex-flow: column nowrap;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -279,7 +272,6 @@ main .tecnology__subContainer div {
 }
 @media only screen and (max-width: 490px) {
   main .tecnology__subContainer div {
-    width: 80%;
     flex-flow: column nowrap;
   }
 }
@@ -328,7 +320,7 @@ main .tecnology__subContainer div p {
 }
 
 .projects__container {
-  margin-bottom: 3rem;
+  margin-bottom: 7.5rem;
 }
 @media only screen and (max-width: 980px) {
   .projects__container {
