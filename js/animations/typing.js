@@ -16,7 +16,7 @@ const typing = () => {
           value.classList.add('end')
           clearInterval(timer)
         }
-      }, 200)
+      }, 350)
     })
   }
   

@@ -255,8 +255,10 @@ main {
     @include media(mobile) {
       gap: 0;
     }
+
     
-    div {
+    
+    .technology__containerTechnology {
       align-items: center;
       box-shadow: inset 0 0 20px #0e0e0f;
       display: flex;
@@ -265,12 +267,93 @@ main {
       justify-content: space-evenly;
       margin-bottom: 2.5rem;
       max-width: 33rem;
+      position: relative;
       width: 100%;
 
-      &:nth-child(2n) {
-       // margin-left: 1rem;
+  
+      &:nth-child(2) {
+          &::before {
+          content: '';
+          background-image: url('../assets/placement/medalha4red.png');
+          position: absolute;
+          height: 51px;
+          left: -20px;
+          top: -20px;
+          width: 51px;
+        }
       }
 
+      &:nth-child(3) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha4red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha4red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
+
+      &:nth-child(5) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha3red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
+
+      &:nth-child(6) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha4red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
+
+      &:nth-child(7) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha3red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
+
+      &:nth-child(8) {
+        &::before {
+        content: '';
+        background-image: url('../assets/placement/medalha3red.png');
+        position: absolute;
+        height: 51px;
+        left: -20px;
+        top: -20px;
+        width: 51px;
+        }
+      }
     
       @include media(tablet) {
         flex-flow: column nowrap;
@@ -333,6 +416,68 @@ main {
       }
     }
   }
+}
+
+.technology__containerRating {
+  background-color: $grey;
+  box-shadow: inset 0 0 20px #0e0e0f;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: inset 0 0 20px #0e0e0f;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 13.75rem;
+  justify-content: space-evenly;
+  margin-bottom: 2.5rem;
+  max-width: 33rem;
+  width: 100%;
+  padding: 0 .5rem;
+  position: relative;
+
+  @include media(tablet) {
+    width: 90%;
+  }
+
+  @include media(mobile) {
+    width: 80%;
+  }
+
+  h4 {
+    font-family: $FPrincipal;
+    font-weight: 600;
+    font-size: 2rem;
+
+    @include media(tablet) {
+      font-size: 1.8rem;
+    }
+  
+    @include media(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    
+      li {
+        width: 100%;
+      }
+      img {
+        @include media(xlarge) {
+          width: 100%;
+        }
+      } 
+  }
+}
+
+.placement {
+  background-image: url('../assets/placement/medalha1.png');
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 // Projects
@@ -410,7 +555,7 @@ main {
     padding-bottom: 1.2rem;
     max-height: 300px;
     margin-left: 3rem;
-
+    width: 100%;
     @include media(average) {
       gap: 30px;
     }
@@ -426,7 +571,6 @@ main {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-
       @include media(average) {
         align-items: flex-start;
         flex-flow: column nowrap;
@@ -443,7 +587,8 @@ main {
         }
         
         @include media(mobile) {
-          font-size: 2rem;
+          font-size: 1.4rem;
+          padding-top: 6px;
         }
       }
     }
@@ -451,7 +596,7 @@ main {
     .projects__projectsIcons {
       display: flex;
       align-items: center;
-
+      width: 40%;
       @include media(tablet) {
         display: none;
       }
@@ -465,7 +610,6 @@ main {
       font-size: 2.65rem;
       padding-left: 1rem;
       position: relative;
-
 
       &::before {
         content: '';
@@ -494,6 +638,10 @@ main {
           margin-left: 1rem;
           width: 35px;
         }
+      }
+
+      @include media(mobile) {
+        flex-flow: row wrap;
       }
     }
 
@@ -554,6 +702,12 @@ main {
       @include media(tablet) {
         text-align: start;
       }
+
+      .projects__subtitle {
+        @include media(mobile) {
+           font-size: 1rem;
+        }
+      }
     }
   }
 }
@@ -571,8 +725,6 @@ main {
     width: 35px;
     z-index: 20;
   } 
-
-  
 }
 
 footer {
@@ -584,14 +736,26 @@ footer {
   height: 12rem;
   width: 100%;
 
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 2rem;
 
-    a {
-      padding-left: .5rem;
+  address {
+    margin: auto;
+    width: 80%;
+    font-style: normal;
+
+    div {
+      display: flex;
+      align-items: flex-end;
+      justify-content: left;
+      margin-bottom: 1rem;
+
+      img {
+        width: 30px;
+      }
+      a, p {
+        font-family: $FPrincipal;
+        font-size: 12px;
+        padding-left: .3rem;
+      }
     }
   }
 }

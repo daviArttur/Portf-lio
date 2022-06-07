@@ -250,7 +250,7 @@ main .tecnology__subContainer {
     gap: 0;
   }
 }
-main .tecnology__subContainer div {
+main .tecnology__subContainer .technology__containerTechnology {
   align-items: center;
   box-shadow: inset 0 0 20px #0e0e0f;
   display: flex;
@@ -259,46 +259,110 @@ main .tecnology__subContainer div {
   justify-content: space-evenly;
   margin-bottom: 2.5rem;
   max-width: 33rem;
+  position: relative;
   width: 100%;
 }
+main .tecnology__subContainer .technology__containerTechnology:nth-child(2)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha4red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(3)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha4red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(4)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha4red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(5)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha3red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(6)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha4red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(7)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha3red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
+main .tecnology__subContainer .technology__containerTechnology:nth-child(8)::before {
+  content: "";
+  background-image: url("../assets/placement/medalha3red.png");
+  position: absolute;
+  height: 51px;
+  left: -20px;
+  top: -20px;
+  width: 51px;
+}
 @media only screen and (max-width: 980px) {
-  main .tecnology__subContainer div {
+  main .tecnology__subContainer .technology__containerTechnology {
     flex-flow: column nowrap;
     width: 90%;
   }
 }
 @media only screen and (max-width: 640px) {
-  main .tecnology__subContainer div {
+  main .tecnology__subContainer .technology__containerTechnology {
     width: 90%;
   }
 }
 @media only screen and (max-width: 640px) {
-  main .tecnology__subContainer div {
+  main .tecnology__subContainer .technology__containerTechnology {
     font-size: 34px;
   }
 }
 @media only screen and (max-width: 490px) {
-  main .tecnology__subContainer div {
+  main .tecnology__subContainer .technology__containerTechnology {
     width: 80%;
     flex-flow: column nowrap;
   }
 }
-main .tecnology__subContainer div img {
+main .tecnology__subContainer .technology__containerTechnology img {
   max-width: 300px;
 }
 @media only screen and (max-width: 980px) {
-  main .tecnology__subContainer div img {
+  main .tecnology__subContainer .technology__containerTechnology img {
     max-width: 200px;
     width: 40%;
   }
 }
 @media only screen and (max-width: 640px) {
-  main .tecnology__subContainer div img {
+  main .tecnology__subContainer .technology__containerTechnology img {
     padding-bottom: 0.5rem;
     width: 120px;
   }
 }
-main .tecnology__subContainer div p {
+main .tecnology__subContainer .technology__containerTechnology p {
   font-family: "Lato", sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
@@ -306,25 +370,88 @@ main .tecnology__subContainer div p {
   text-shadow: 0px 0px 10px #0e0e0f;
 }
 @media only screen and (max-width: 980px) {
-  main .tecnology__subContainer div p {
+  main .tecnology__subContainer .technology__containerTechnology p {
     width: auto;
     font-size: 42px;
   }
 }
 @media only screen and (max-width: 640px) {
-  main .tecnology__subContainer div p {
+  main .tecnology__subContainer .technology__containerTechnology p {
     font-size: 34px;
   }
 }
 @media only screen and (max-width: 490px) {
-  main .tecnology__subContainer div p {
+  main .tecnology__subContainer .technology__containerTechnology p {
     font-size: 26px;
   }
 }
 @media only screen and (max-width: 1100px) {
-  main .tecnology__subContainer div:nth-child(odd) {
+  main .tecnology__subContainer .technology__containerTechnology:nth-child(odd) {
     margin-right: 0;
   }
+}
+
+.technology__containerRating {
+  background-color: #27272A;
+  box-shadow: inset 0 0 20px #0e0e0f;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: inset 0 0 20px #0e0e0f;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 13.75rem;
+  justify-content: space-evenly;
+  margin-bottom: 2.5rem;
+  max-width: 33rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+}
+@media only screen and (max-width: 980px) {
+  .technology__containerRating {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .technology__containerRating {
+    width: 80%;
+  }
+}
+.technology__containerRating h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 980px) {
+  .technology__containerRating h4 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .technology__containerRating h4 {
+    font-size: 1.6rem;
+  }
+}
+.technology__containerRating ol {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+.technology__containerRating ol li {
+  width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  .technology__containerRating ol img {
+    width: 100%;
+  }
+}
+
+.placement {
+  background-image: url("../assets/placement/medalha1.png");
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .projects__container {
@@ -401,6 +528,7 @@ main .tecnology__subContainer div p {
   padding-bottom: 1.2rem;
   max-height: 300px;
   margin-left: 3rem;
+  width: 100%;
 }
 @media only screen and (max-width: 640px) {
   .projects__containerData .projects__containerInfo {
@@ -441,12 +569,14 @@ main .tecnology__subContainer div p {
 }
 @media only screen and (max-width: 490px) {
   .projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    padding-top: 6px;
   }
 }
 .projects__containerData .projects__containerInfo .projects__projectsIcons {
   display: flex;
   align-items: center;
+  width: 40%;
 }
 @media only screen and (max-width: 980px) {
   .projects__containerData .projects__containerInfo .projects__projectsIcons {
@@ -486,6 +616,11 @@ main .tecnology__subContainer div p {
     border-radius: 0;
     margin-left: 1rem;
     width: 35px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .projects__containerData section .projects__projectsIconsMedia {
+    flex-flow: row wrap;
   }
 }
 .projects__containerData section .projects__projectsIcons img {
@@ -543,6 +678,11 @@ main .tecnology__subContainer div p {
     text-align: start;
   }
 }
+@media only screen and (max-width: 490px) {
+  .projects__containerData section .projects__gitLInk .projects__subtitle {
+    font-size: 1rem;
+  }
+}
 
 .position {
   position: relative;
@@ -567,14 +707,24 @@ footer {
   height: 12rem;
   width: 100%;
 }
-footer div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 2rem;
+footer address {
+  margin: auto;
+  width: 80%;
+  font-style: normal;
 }
-footer div a {
-  padding-left: 0.5rem;
+footer address div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  margin-bottom: 1rem;
+}
+footer address div img {
+  width: 30px;
+}
+footer address div a, footer address div p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding-left: 0.3rem;
 }
 
 .js-scroll {

@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./sass/styles.css">
+  <link rel="shortcut icon" type="imagem/x-icon" href="assets/fotoDavi.png" />
   <title>Davi Artur</title>
 </head>
 
@@ -27,7 +28,7 @@
       <h3 class="subtitle">Biografia</h3>
 
       <section class="biography__subContainer">
-        <p>Em contato com a tecnologia desde a infância. Sempre gostei da área e em 2021 embarquei de vez no desenvolvimento web. Gosto de falar sobre investimentos e trocar experiências.</p>
+        <p>Em contato com a tecnologia desde a infância, sempre gostei da área e no fim do ensino médio entrei de vez no desenvolvimento web. Gosto aprender coisas novas e trocar experiências.</p>
         <strong>AspiranteEmDesingDeInterfaces</strong>
       </section>
 
@@ -37,45 +38,53 @@
       <h3 class="subtitle">Tecnologias</h3>
 
       <section class="tecnology__subContainer">
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoHtml.png" alt="">
+
+        <div class="technology__containerRating js-scroll">
+          <h4>Autoavaliação</h4>
+          <ol>
+            <li><img src="./assets/placement/medalha1.png" alt="medalha nível 1"></li>
+            <li><img src="./assets/placement/medalha2.png" alt="medalha nível 2"></li>
+            <li><img src="./assets/placement/medalha3.png" alt="medalha nível 3"></li>
+            <li><img src="./assets/placement/medalha4.png" alt="medalha nível 4"></li>
+            <li><img src="./assets/placement/medalha5.png" alt="medalha nível 5"></li>
+          </ol>
+        </div>
+
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoHtml.png" alt="Logo da linguagem HyperText Markup Language">
           <p>HTML5</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoSass.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
           <p>Sass</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoCss.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoCss.png" alt="Logo do Cascading Style Sheets">
           <p>CSS3</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoReact.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoReact.png" alt="Logo do React">
           <p>React</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoJavaScript.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoJavaScript.png" alt="Logo do JavaScript">
           <p>JavaScript</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoTypeScript.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoTypeScript.png" alt="Logo do TypeSCript">
           <p>TypeScript</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoGit.png" alt="">
+        <div class="technology__containerTechnology js-scroll">
+          <img src="assets/logosTecnologia/logoGit.png" alt="Logo do Git">
           <p>Git</p>
         </div>
 
-        <div class="technology__containerTechnology">
-          <img src="assets/logosTecnologia/logoNpm.png" alt="">
-          <p>Npm</p>
-        </div>
       </section>
     </section>
 
@@ -83,121 +92,117 @@
       <h3 class="subtitle">Melhores Projetos</h3>
 
       <section class="projects__subcontainer">
-        <section class="projects__containerData">
+        <section class="projects__containerData js-scroll">
           <div>
             <img src="assets/logosProjects/logoDogs.jpg" alt="Foto de um cachorro preto com uma roupa para o frio" class="projects__photoProject">
           </div>
-          
+
           <section class="projects__containerInfo">
-            
+
             <div class="projects__containerTitle_Gears">
               <h4 class="projects__subtitle">Dogs</h4>
-              <div class="projects__projectsIcons position">
-                <p> </p>
-                <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position">
-                <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-                <img src="./assets/logosTecnologia/logoJavaScript.png" alt="Logo do JavaScript">
-                <img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React">
-              </div>
+              <ul type="none" class="projects__projectsIcons position">
+                <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5"></li>
+                <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"> </li>
+                <li><img src="./assets/logosTecnologia/logoJavaScript.png" alt="Logo do JavaScript"> </li>
+                <li><img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React"> </li>
+              </ul>
             </div>
 
-            <div class="projects__projectsIconsMedia position">
-              <p> </p>
-              <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position">
-              <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-              <img src="./assets/logosTecnologia/logoJavaScript.png" alt="Logo do JavaScript">
-              <img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React">
-            </div>
+            <ul type="none" class="projects__projectsIconsMedia position">
+              <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position"></li>
+              <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"></li>
+              <li><img src="./assets/logosTecnologia/logoJavaScript.png" alt="Logo do JavaScript"></li>
+              <li><img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React"></li>
+            </ul>
 
             <p class="projects__ideia">Rede social criada especialmente para seu dog</p>
 
-            <a href="" class="projects__gitLInk">Dogs</a>
+            <a href="https://github.com/daviArttur/Dogs-social-media-React.JS" class="projects__gitLInk">Dogs</a>
           </section>
         </section>
 
-        <section class="projects__containerData">
+        <section class="projects__containerData js-scroll">
           <div>
-            <img src="assets/logosProjects/LogoToDo.jpg" class="projects__photoProject" alt="">
+            <img src="assets/logosProjects/LogoToDo.jpg" class="projects__photoProject" alt="Logo da lista de tarefas">
           </div>
-          
+
           <section class="projects__containerInfo">
 
-              <div class="projects__containerTitle_Gears">
-                <h4 class="projects__subtitle">Lista de tarefas</h4>
-                <div class="projects__projectsIcons position">
-                  <p> </p>
-                  <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position">
-                  <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-                  <img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React">
-                  <img src="./assets/logosTecnologia/logoTypeScript.png" alt="Logo do TypeScript">
-                </div>
-              </div>
-
-              <div class="projects__projectsIconsMedia position">
-                <p> </p>
-                <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position">
-                <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-                <img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React">
-                <img src="./assets/logosTecnologia/logoTypeScript.png" alt="Logo do TypeScript">
-              </div>
-
-              <p class="projects__ideia">Não esqueça mais dos seus afazeres com essa lista de tarefas</p>
-
-              <a href="" class="projects__gitLInk">To-do-List</a>
-            </section>
-          </section>
-
-          <section class="projects__containerData">
-            <div>
-              <img src="assets/logosProjects/logoLeScone.jpg" alt="Foto de um cachorro preto com uma roupa para o frio" class="projects__photoProject">
+            <div class="projects__containerTitle_Gears">
+              <h4 class="projects__subtitle">Lista de tarefas</h4>
+              <ul type="none" class="projects__projectsIcons position">
+                <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5"></li>
+                <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"></li>
+                <li><img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React"></li>
+                <li></li>
+                <li><img src="./assets/logosTecnologia/logoTypeScript.png" alt="Logo do TypeScript"></li>
+              </ul>
             </div>
-            
-            <section class="projects__containerInfo">
-              
-              <div class="projects__containerTitle_Gears">
-                <h4 class="projects__subtitle">Le scone</h4>
-                <div class="projects__projectsIcons position">
-                  <p> </p>
-                  <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5">
-                  <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-                </div>
-              </div>
 
-              <div class="projects__projectsIconsMedia position">
-                <p> </p>
-                <img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5">
-                <img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass">
-              </div>
-  
-              <p class="projects__ideia">O melhor restaurante da região agora tem seu cardápio online</p>
-  
-              <a href="" class="projects__gitLInk">Le-Scone</a>
-            </section>
+            <ul type="none" class="projects__projectsIconsMedia position">
+              <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5" class="position"></li>
+              <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"></li>
+              <li><img src="./assets/logosTecnologia/logoReact.png" alt="Logo do React"></li>
+              <li><img src="./assets/logosTecnologia/logoTypeScript.png" alt="Logo do TypeScript"></li>
+            </ul>
+
+            <p class="projects__ideia">Não esqueça mais dos seus afazeres com essa lista de tarefas</p>
+
+            <a href="https://github.com/daviArttur/To-do-List-TypeScript" class="projects__gitLInk">To-do-List</a>
+          </section>
+        </section>
+
+        <section class="projects__containerData js-scroll">
+          <div>
+            <img src="assets/logosProjects/logoLeScone.jpg" alt="Foto de um chef de cozinha preparando comida no restaurante" class="projects__photoProject">
+          </div>
+
+          <section class="projects__containerInfo">
+
+            <div class="projects__containerTitle_Gears">
+              <h4 class="projects__subtitle">Le scone</h4>
+              <ul type="none" class="projects__projectsIcons position">
+                <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5"></li>
+                <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"></li>
+              </ul>
+            </div>
+
+            <ul type="none"" class="projects__projectsIconsMedia position">
+              <li><img src="./assets/logosTecnologia/logoHtml.png" alt="Logo do HTML5"></li>
+              <li><img src="./assets/logosTecnologia/logoSass.png" alt="Logo do Sass"></li>
+            </ul>
+
+            <p class="projects__ideia">O melhor restaurante da região agora tem seu cardápio online</p>
+
+            <a href="https://github.com/daviArttur/Le-Scone-Scss" class="projects__gitLInk">Le-Scone</a>
           </section>
         </section>
       </section>
     </section>
+    </section>
   </main>
 
   <footer>
-    <div>
-      <img src="./assets/icons/Logo email.svg"/>
-      <a href="">daviartur2004@gmail.com</a>
-     </div>
-     
-     <div>
-      <img src="./assets/icons/logolinkedin1.svg" />
-      <a href="">Davi Artur</a>
-     </div>
+    <address>
+      <div>
+        <img src="./assets/icons/Logo email.svg" alt="foto de uma carta" />
+        <p> daviartur2004@gmail.com</p>
+      </div>
 
-     <div>
-      <img src="./assets/icons/Logo github.svg" />
-      <a href="">daviArttur</a>
-     </div>
-     
+      <div>
+        <img src="./assets/icons/logolinkedin1.svg" alt="logo do Linkedin" />
+        <a href="https://www.linkedin.com/in/davi-artur-9a7712215/">Davi Artur</a>
+      </div>
+
+      <div>
+        <img src="./assets/icons/Logo github.svg" alt="logo do GitHub" />
+        <a href="https://github.com/daviArttur">daviArttur</a>
+      </div>
+    </address>
   </footer>
 
 </body>
- <script type="module" src="./js/index.js"></script>
- 
+<script type="module" src="./js/index.js"></script>
+
 </html>
