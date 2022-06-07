@@ -643,6 +643,7 @@ main .tecnology__subContainer .technology__containerTechnology p {
 }
 @media only screen and (max-width: 490px) {
   .projects__containerData section .projects__ideia {
+    padding-right: .5rem;
     word-break: keep-all;
   }
 }
