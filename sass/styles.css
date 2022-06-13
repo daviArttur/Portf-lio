@@ -417,18 +417,18 @@ main .tecnology__subContainer .technology__containerTechnology p {
     width: 80%;
   }
 }
-.technology__containerRating h4 {
+.technology__containerRating .tria {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2rem;
 }
 @media only screen and (max-width: 980px) {
-  .technology__containerRating h4 {
+  .technology__containerRating .tria {
     font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 490px) {
-  .technology__containerRating h4 {
+  .technology__containerRating .tria {
     font-size: 1.6rem;
   }
 }
@@ -559,16 +559,16 @@ main .tecnology__subContainer .technology__containerTechnology p {
     padding-top: 5px;
   }
 }
-.projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+.projects__containerData .projects__containerInfo .projects__containerTitle_Gears .tria {
   white-space: nowrap;
 }
 @media only screen and (max-width: 980px) {
-  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears .tria {
     font-size: 2.4rem;
   }
 }
 @media only screen and (max-width: 490px) {
-  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears h4 {
+  .projects__containerData .projects__containerInfo .projects__containerTitle_Gears .tria {
     font-size: 1.4rem;
     padding-top: 6px;
   }
@@ -583,14 +583,34 @@ main .tecnology__subContainer .technology__containerTechnology p {
     display: none;
   }
 }
-.projects__containerData section h4 {
+.projects__containerData section a {
+  text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 2.65rem;
   padding-left: 1rem;
   position: relative;
 }
-.projects__containerData section h4::before {
+.projects__containerData section .tria {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2.65rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.projects__containerData section .tria::after {
+  content: "";
+  background-image: url("../assets/icons/link-externo.svg");
+  background-size: contain;
+  height: 15px;
+  right: -18px;
+  position: absolute;
+  top: 1px;
+  width: 15px;
+  z-index: 20;
+}
+.projects__containerData section .tria::before {
   content: "";
   background-image: url("../assets/icons/Polygon.svg");
   height: 30px;
@@ -601,7 +621,7 @@ main .tecnology__subContainer .technology__containerTechnology p {
   z-index: 20;
 }
 @media only screen and (max-width: 490px) {
-  .projects__containerData section h4::before {
+  .projects__containerData section .tria::before {
     top: 5px;
   }
 }
@@ -643,7 +663,6 @@ main .tecnology__subContainer .technology__containerTechnology p {
 }
 @media only screen and (max-width: 490px) {
   .projects__containerData section .projects__ideia {
-    padding-right: .5rem;
     word-break: keep-all;
   }
 }
@@ -680,7 +699,7 @@ main .tecnology__subContainer .technology__containerTechnology p {
   }
 }
 @media only screen and (max-width: 490px) {
-  .projects__containerData section .projects__gitLInk .projects__subtitle {
+  .projects__containerData section .projects__gitLInk .tria {
     font-size: 1rem;
   }
 }
