@@ -21,7 +21,6 @@ const typing = () => {
   }
   
  function handleMutation(mutation) {
-  console.log(mutation)
   if (mutation[0].target.classList.contains('ativo')) {
     observer.disconnect()
     init();

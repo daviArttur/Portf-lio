@@ -8,8 +8,6 @@ const animaScroll = () => {
       const hightElement = element.getBoundingClientRect().top
       const hightDocument = window.innerHeight * 0.9
       const height = (hightDocument - hightElement)
-       console.log(height)
-      console.log(hightDocument)
       if (hightElement < hightDocument) {
         element.classList.add('ativo')
       } else if (element.classList.contains('ativo')){
